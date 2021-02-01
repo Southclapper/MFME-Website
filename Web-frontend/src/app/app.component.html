@@ -5,16 +5,17 @@
 
   <nb-sidebar fixed="false" tag="left">
     <a class="navbar-brand" href="#">
-      <img src="../assets/logo/logo-website.svg" alt="" width="100%" height="auto" class="d-inline-block align-center mb-5">
+      <img src="../assets/logo/logo-website.svg" alt="" width="100%" height="auto" class="d-inline-block align-center mb-4">
     </a>
     <nb-menu [items]="items">
     </nb-menu>
   </nb-sidebar>
 
   <nb-layout-column class="colored-column-warning">
-    <button nbButton hero status="info" shape="rectangle" size="small" (click)="toggle()">
+    <button nbButton hero status="info" class="" shape="rectangle" size="small" (click)="toggle()">
       <nb-icon icon="menu-outline"></nb-icon>
     </button>
+    <router-outlet></router-outlet>
   </nb-layout-column>
 
 </nb-layout>

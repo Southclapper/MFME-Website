@@ -12,18 +12,22 @@ export class AppComponent {
     {
       title: 'Home',
       icon: 'home-outline',
+      link: '/home-overview',
     },
     {
       title: 'Project description',
       icon: 'briefcase-outline',
+      link: '/project-overview',
     },
     {
       title: 'Teammates',
       icon: 'people-outline',
+      link: '/teams-mate-overview',
     },
     {
       title: 'Powerpoint visualization',
       icon: 'file-text-outline',
+      link: '/canvas-overview',
     },
   ];
 

@@ -1,0 +1,80 @@
+[
+    {
+        "Name": "Axel MARCEAU",
+        "Mail": "axel.marceau@ynov.com",
+        "Intro": "B3 informatique à Ynov Toulouse",
+        "Picture": "../assets/img-teams/axel.jpg"
+    },
+    {
+        "Name": "Thibault CONTE",
+        "Mail": "thibault.conte@ynov.com",
+        "Intro": "B3 informatique à Ynov Toulouse",
+        "Picture": "../assets/img-teams/thibault.jpg"
+    },
+    {
+        "Name": "Mathilde Roch",
+        "Mail": "mathilde.roch@ynov.com",
+        "Intro": "B3 marketing à Ynov Toulouse",
+        "Picture": "../assets/img-teams/mathilde.jpg"
+    },
+    {
+        "Name": "Dmitrii KOPENKIN",
+        "Mail": "dmitrii.kopenkin@ynov.com",
+        "Intro": "B2 informatique à Ynov Toulouse",
+        "Picture": "../assets/img-teams/dimitri.jpg"
+    },
+    {
+        "Name": "Lisa Racaud",
+        "Mail": "lisa.racaud@ynov.com",
+        "Intro": "B2 audiovisuel à Ynov Toulouse",
+        "Picture": "../assets/img-teams/lisa.png"
+    },
+    {
+        "Name": "Wisam TEBOURSKI",
+        "Mail": "wisam.tebourski@ynov.com",
+        "Intro": "B2 animation 3D à Ynov Toulouse",
+        "Picture": "../assets/img-teams/wissam.jpg"
+    },
+    {
+        "Name": "Flora BACQUENOIS",
+        "Mail": "flora.bacquenois@ynov.com",
+        "Intro": "B2 création design à Ynov Toulouse",
+        "Picture": "../assets/img-teams/flora.jpg"
+    },
+    {
+        "Name": "Tom HOLLINGWORTH",
+        "Mail": "tom.hollingworth@ynov.com",
+        "Intro": "B1 informatique à Ynov Toulouse",
+        "Picture": "../assets/img-teams/tom.jpg"
+    },
+    {
+        "Name": "Maëva NAVARRO",
+        "Mail": "meava.navarro@ynov.com",
+        "Intro": "B1 audiovisuel à Ynov Toulouse",
+        "Picture": "../assets/img-teams/mae.jpg"
+    },
+    {
+        "Name": "Alexia MAILET",
+        "Mail": "alexia.mailet@ynov.com",
+        "Intro": "B1 Animation 3D à Ynov Toulouse",
+        "Picture": "../assets/img-teams/alexia.jpg"
+    },
+    {
+        "Name": "Tristan NOE MAURY",
+        "Mail": "tristan.noemaury@ynov.com",
+        "Intro": "B1 Animation 3D à Ynov Toulouse",
+        "Picture": ""
+    },
+    {
+        "Name": "Dania KEDDAM",
+        "Mail": "dania.keddam@ynov.com",
+        "Intro": "B1 marketing à Ynov Toulouse",
+        "Picture": "../assets/img-teams/dania.jpg"
+    },
+    {
+        "Name": "Téo POUSSOU",
+        "Mail": "teo.poussou@ynov.com",
+        "Intro": "B1 création design à Ynov Toulouse",
+        "Picture": "../assets/img-teams/leo.png"
+    }
+]

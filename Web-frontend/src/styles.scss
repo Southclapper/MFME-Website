@@ -2,6 +2,7 @@
 
 @import '~@nebular/theme/styles/globals';
 @import 'app/app.component.scss';
+@import 'app/components/teamsmate/teamsmate.component.scss';
 @include nb-install() {
   @include nb-theme-global();
 };

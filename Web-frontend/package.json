@@ -23,7 +23,9 @@
     "@nebular/eva-icons": "^6.2.2",
     "@nebular/theme": "^6.2.2",
     "eva-icons": "^1.1.3",
+    "gltf-loader": "^0.1.0",
     "rxjs": "~6.6.0",
+    "three": "^0.125.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

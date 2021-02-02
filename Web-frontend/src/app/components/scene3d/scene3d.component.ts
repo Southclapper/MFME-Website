@@ -10,28 +10,39 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 })
 
 export class Scene3dComponent implements OnInit {
+
+  @Input() meshPath: string;
+  @Input() xLarge: number = 800;
+  @Input() yLarge: number = 450;
+
+  
   ngOnInit() {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xdddddd);
     const light = new THREE.AmbientLight( 0x404040 );
+    let directionalLight = new THREE.DirectionalLight(0x404040, 15);
+    directionalLight.position.set(0,1,0);
+    directionalLight.castShadow = true;
+    
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 20000);
 
     camera.position.x = 5000;
     camera.position.y = 3000;
     
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(800, 450);
+    renderer.setSize(this.xLarge, this.yLarge);
     document.body.appendChild(renderer.domElement);
     
     const controls = new OrbitControls( camera, renderer.domElement );
 
     let loader = new GLTFLoader();
-    loader.load('../assets/underground_shelter/scene.gltf', 
+    //loader.load('../assets/underground_shelter/scene.gltf', 
+    loader.load(this.meshPath, 
     
                 function(gltf){
                     let object1 = gltf.scene.children[0];
                     
-                    scene.add(gltf.scene, light);
+                    scene.add(gltf.scene, light, directionalLight);
                     renderer.render(scene, camera);
                 }
       );

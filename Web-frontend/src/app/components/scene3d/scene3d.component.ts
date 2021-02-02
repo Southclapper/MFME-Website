@@ -29,11 +29,12 @@ export class Scene3dComponent implements OnInit {
     directionalLight.castShadow = true;
     
     // creation camera
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 20000);
+    //const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+    const camera = new THREE.PerspectiveCamera(75, 1920/1080, 0.1, 2000);
 
     // position camera
-    camera.position.x = 5000;
-    camera.position.y = 3000;
+    camera.position.x = 50;
+    camera.position.y = 30;
     
     // moteur de rendu three
     const renderer = new THREE.WebGLRenderer();

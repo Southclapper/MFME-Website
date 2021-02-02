@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import * as THREE from 'three';
-import * as GLTF from 'gltf-loader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 @Component({
   selector: 'app-scene3d',
@@ -12,34 +13,30 @@ export class Scene3dComponent implements OnInit {
   ngOnInit() {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xdddddd);
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(800, 800);
-    document.body.appendChild(renderer.domElement);
-    /*
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ffff });
-    const cube = new THREE.Mesh(geometry, material);
-    */
-    let loader = new GLTF.GLTFLoader();
-    loader.load('../assets/underground_shelter/scene.gltf', 
-    function(gltf){
-        let object1 = gltf.scene.children[0];
+    const light = new THREE.AmbientLight( 0x404040 );
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 20000);
 
-        scene.add(gltf.scene);
-        renderer.render(scene, camera);
-    });
-    camera.position.x += 45/180*Math.PI;
+    camera.rotation.y = 45/180*Math.PI;
     
-    //scene.add(cube);
-    //cube.rotation.x += 0.5;
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(800, 450);
+    document.body.appendChild(renderer.domElement);
+    
+    const controls = new OrbitControls( camera, renderer.domElement );
+
+    let loader = new GLTFLoader();
+    loader.load('../assets/underground_shelter/scene.gltf', 
+    
+                function(gltf){
+                    let object1 = gltf.scene.children[0];
+                    
+                    scene.add(gltf.scene, light);
+                    renderer.render(scene, camera);
+                }
+      );
+    
     const animate = function () {
       requestAnimationFrame(animate);
-
-      //cube.rotation.x += 0.01;
-      //cube.rotation.y += 0.01;
-      camera.position.y += 0.01
-
       renderer.render(scene, camera);
     };
     camera.position.z = 5;

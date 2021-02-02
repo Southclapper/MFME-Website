@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectOverviewComponent } from './components/project-overview/project-overview.component';
 import { CanvasOverviewComponent } from './components/canvas-overview/canvas-overview.component';
+import { Scene3dComponent } from './components/scene3d/scene3d.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CanvasOverviewComponent } from './components/canvas-overview/canvas-ove
     TeamsmateComponent,
     HomeComponent,
     ProjectOverviewComponent,
-    CanvasOverviewComponent
+    CanvasOverviewComponent,
+    Scene3dComponent
   ],
   imports: [
     BrowserModule,

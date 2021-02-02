@@ -16,7 +16,8 @@ export class Scene3dComponent implements OnInit {
     const light = new THREE.AmbientLight( 0x404040 );
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 20000);
 
-    camera.rotation.y = 45/180*Math.PI;
+    camera.position.x = 5000;
+    camera.position.y = 3000;
     
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(800, 450);
